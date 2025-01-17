@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="IMA Logo square black-02.PNG">
+    <title>IMA - In Media Agency</title>
+    <link rel="stylesheet" href="home_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">      
+</head>
+<body>
+    <header> 
+            <nav>
+            <ul class="nav_links">
+                <li><a class= "menu" href="index.html">Home</a></li> 
+                <li><a class= "menu" href="#">Services &#x25BE;</a>
+                    <ul id="submenu">
+                        <li><a href="videoproduction.html">Video Production</a></li>
+                        <li><a href="graphicdesign.html">Graphic Design</a></li>
+                        <li><a href="animatedpresentations.html">Animated Presentations</a></li>
+                        <li><a href="musicandaudio.html">Music & Audio</a></li>
+                    </ul>
+                </li> 
+            </ul> 
+          
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <div class="header-logo">
+        <a href="index.html">
+            <img class="logo" src="images/IMA logo in white.png" alt="Logo"/> 
+            <h1>IN MEDIA AGENCY</h1>  
+            </a>
+        </div>
+        <a class="header-book" href="https://www.instagram.com/ima_producer/"><i class="fab fa-instagram"></i></a>
+
+        <div class="header-stack">
+            <div class="header-logo-mobile">
+            <a href="index.html">
+                <img class="logo" src="images/IMA logo in white.png" alt="Logo"/> 
+                <h1>IN MEDIA AGENCY</h1>  
+                </a>
+            </div>
+            </div>
+            
+            <script src="script.js"></script>
+    </header>
+    <hr>
+    <div class="videoproduction">
+    <h1>Video Production</h1>
+    <h2>We offer filming, photography, and video production services suited for all types of industries.</h2>
+        <div id="background">
+            <div class="content">
+                <video src="images/HLNY - CWC v7.mp4" controls autoplay muted loop></video>
+                <div class="text">
+                    <h3>Health Care/Medical Information Videos</h3>
+                    <br>
+                    <h3>Embedding animated PowerPoints and creative visuals to educate healthcare professionals and patients. Breaking down complex information for viewers to learn and understand in an engaging way.</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="background">
+            <div class="content">
+                <img src="images/Screen Shot 2021-06-26 at 9.26.16 PM.png">
+                <div class="text">
+                    <h3>Educational Programs for Children</h3>
+                    <br>
+                    <h3>Creating unique programs that captivate a young mind's imagination and develop fun ways for kids to learn through visual learning.</h3>
+                    <br>
+                    <h3>⭐️ Approved Vendors of NYC DOE</h3>
+                </div>
+            </div>
+        </div>
+        
+        <div id="background">
+            <div class="content">
+                <video src="images/Go Tell It On The Mountain Final.mp4" controls autoplay muted loop></video>
+                <div class="text">
+                    <h3>Music Videos</h3>
+                    <br>
+                    <h3>Beautiful lyric videos with scenic backgrounds and text animation. Check out our music & audio page for more information on music video production.</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="background">
+            <div class="content">
+                <img src="images/Screen Shot 2021-06-26 at 9.46.20 PM.png">
+                <div class="text">
+                    <h3>Virtual Choirs/Concerts</h3>
+                    <br>
+                    <h3>Combine 10s or 100s of voices and/or instruments like an angelic choir or a symphony orchestra. Let us guide you through the steps from recording to final production. Check out our music & audio page for more information on music video production.</h3>
+                </div>
+            </div>
+        </div>
+    
+        <div id="background">
+            <div class="content">
+                <video src="images/Book Reading Sample.mov" controls autoplay muted loop></video>
+                <div class="text">
+                    <h3>Book Reading Voice Overs</h3>
+                    <br>
+                    <h3>Bring your book to life! Perfect for all ages especially young children.</h3>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <footer>   
+        <br>
+        <i>Copyright &copy; <span id="currentYear"> 2025 </span> by IMA - In Media Agency</i><br>
+    </footer>
+    <script src="copyright.js"></script>
+
+    <style>
+        .videoproduction{
+            background-color: white;
+            padding: 20px;
+        }
+        .videoproduction h1{
+            font-size: 5vw;
+            font-weight: 400;
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        .videoproduction h2{
+            font-size: 2vw;
+            font-weight: 300;
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between; 
+            gap: 20px; 
+            padding: 20px; 
+        }
+
+        #background{
+            background-color: rgba(125, 142, 241, 0.2);
+            margin: 20px;
+            margin-right: 30px;
+            margin-left: 30px;
+            border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .content video, .content img {
+            object-fit: cover; 
+            margin-right: 20px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .content .text {
+            flex: 1;
+            max-width: calc(100% - 35px); /* Adjust to prevent overflowing with the image */
+            word-break: break-word; /* Ensures long words or lines break properly */
+            overflow-wrap: break-word; 
+        }
+
+        .text h3{
+            font-size: 23px;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+       
+
+        @media(max-width: 1000px) {
+            .videoproduction h1{
+                font-size: 5vh;
+               
+            }
+            .videoproduction h2{
+                font-size: 3vh;
+            }
+            #background{
+                padding-right: 2px;
+            }
+            .content {
+                flex-direction: column; 
+                align-items: center; 
+            }
+
+            .content video, .content img {
+                margin-right: 3px; 
+                margin-bottom: 20px; 
+                max-width: 100%;
+            }
+
+
+            .content .text {
+                text-align: left;
+                
+                max-width: 100%;
+            }
+            .text h3{
+                font-size: 3vh;
+            }
+        }
+       
+    </style>
+</body>
+</html>

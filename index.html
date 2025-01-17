@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="IMA Logo square black-02.PNG">
+    <title>IMA - In Media Agency</title>
+    <link rel="stylesheet" href="home_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">   
+</head>
+<body>
+    <header> 
+        
+            <nav>
+            <ul class="nav_links">
+                <li><a class= "menu" href="index.html">Home</a></li> 
+                <li><a class= "menu" href="#">Services &#x25BE;</a>
+                    <ul id="submenu">
+                        <li><a href="videoproduction.html">Video Production</a></li>
+                        <li><a href="graphicdesign.html">Graphic Design</a></li>
+                        <li><a href="animatedpresentations.html">Animated Presentations</a></li>
+                        <li><a href="musicandaudio.html">Music & Audio</a></li>
+                    </ul>
+                </li> 
+            </ul> 
+          
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <div class="header-logo">
+        <a href="index.html">
+            <img class="logo-big" src="images/IMA logo in white.png" alt="Logo"/> 
+            <h1 class="logo-words">IN MEDIA AGENCY</h1>  
+            </a>
+        </div>
+        <a class="header-book" href="https://www.instagram.com/ima_producer/"><i class="fab fa-instagram"></i></a>
+
+        <div class="header-stack">
+            <div class="header-logo-mobile">
+            <a href="index.html">
+                <img class="logo" src="images/IMA logo in white.png" alt="Logo"/> 
+                <h1>IN MEDIA AGENCY</h1>  
+                </a>
+            </div>
+            
+            </div>
+            
+            <script src="script.js"></script>
+    </header>
+    <hr>
+    <div class="home-projects">
+        <h2 class="title-projects">Explore what we can do</h2>
+        <div class="projects">
+            <div class="img-wrapper">
+                <img src="images/AdobeStock_234618581.jpeg" alt="Video production">
+                <a class="overlay-button" id="purple" href="videoproduction.html">Video Production</a>
+            </div>
+            <div class="img-wrapper">
+                <img src="images/AdobeStock_148903033.jpeg" alt="Graphic design">
+                <a class="overlay-button" id="blue" href="graphicdesign.html">Graphic Design</a>
+            </div>
+            <div class="img-wrapper">
+                <img src="images/Screen Shot 2021-06-25 at 4.32.12 PM.png" alt="Animated presentations">
+                <a class="overlay-button" id="yellow" href="animatedpresentations.html">Animated Presentations</a>
+            </div>
+            <div class="img-wrapper">
+                <img src="images/AdobeStock_359003932.jpeg" alt="Music & Audio">
+                <a class="overlay-button" id="orange" href="musicandaudio.html">Music & Audio</a>
+            </div>
+        </div>  
+    </div>
+
+    <script>
+        // Function to change text if screen width is less than 1070px
+        function changeTextForSmallScreens() {
+            var element = document.querySelector('.overlay-button#yellow');
+            if (window.innerWidth < 1070 && element) {
+                element.textContent = 'PowerPoints';
+            } else if (window.innerWidth >= 1070 && element) {
+                element.textContent = 'Animated Presentations';
+            }
+        }
+    
+        // Call the function when the page loads
+        window.onload = changeTextForSmallScreens;
+    
+        // Add event listener to handle resizing
+        window.onresize = changeTextForSmallScreens;
+    </script>
+    
+    <footer>   
+        <br>
+        <i>Copyright &copy; <span id="currentYear"> 2025 </span> by IMA - In Media Agency</i><br>
+    </footer>
+    <script src="copyright.js"></script> 
+</body>
+</html>

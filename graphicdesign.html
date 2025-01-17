@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="IMA Logo square black-02.PNG">
+    <title>IMA - In Media Agency</title>
+    <link rel="stylesheet" href="home_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">     
+</head>
+<body>
+    <header> 
+            <nav>
+            <ul class="nav_links">
+                <li><a class= "menu" href="index.html">Home</a></li> 
+                <li><a class= "menu" href="#">Services &#x25BE;</a>
+                    <ul id="submenu">
+                        <li><a href="videoproduction.html">Video Production</a></li>
+                        <li><a href="graphicdesign.html">Graphic Design</a></li>
+                        <li><a href="animatedpresentations.html">Animated Presentations</a></li>
+                        <li><a href="musicandaudio.html">Music & Audio</a></li>
+                    </ul>
+                </li> 
+            </ul> 
+          
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <div class="header-logo">
+        <a href="index.html">
+            <img class="logo" src="images/IMA logo in white.png" alt="Logo"/> 
+            <h1>IN MEDIA AGENCY</h1>  
+            </a>
+        </div>
+        <a class="header-book" href="https://www.instagram.com/ima_producer/"><i class="fab fa-instagram"></i></a>
+
+        <div class="header-stack">
+            <div class="header-logo-mobile">
+            <a href="index.html">
+                <img class="logo" src="images/IMA logo in white.png" alt="Logo"/> 
+                <h1>IN MEDIA AGENCY</h1>  
+                </a>
+            </div>
+            </div>
+            
+            <script src="script.js"></script>
+    </header>
+    <hr>
+    <div class="graphicdesign">
+    <h1>Graphic Design</h1>
+    <h2>Creating eye-catching visuals for commercial advertising customized to your brand.</h2>
+        <div id="background">
+            <div class="content">
+                <img src="images/OCM 1000 poster 6.4_CL.png">
+                <div class="text">
+                    <h3>Pamphlets/Brochures/Posters/Banners/eBlasts</h3>
+                    <br>
+                    <h3>Carefully designed for easy reading and quick understanding. The bright colors and clean design captivate the viewer's attention. A picture is worth a thousand words. Make a memorable impression.</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="background">
+            <div class="content">
+                <img src="images/Screenshot 2024-01-23 at 3.26_edited.jpg">
+                <div class="text">
+                    <h3>Book Covers</h3>
+                    <br>
+                    <h3>Beautiful covers for your digital or print books, magazines, and workshop booklets.</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="background">
+            <div class="content">
+                <img src="images/DSC06615_edited.png">
+                <div class="text">
+                    <h3>Business Cards</h3>
+                    <br>
+                    <h3>Let us help you design fun business cards that your clients will keep and remember.</h3>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <footer>   
+        <br>
+        <i>Copyright &copy; <span id="currentYear"> 2025 </span> by IMA - In Media Agency</i><br>
+    </footer>
+    <script src="copyright.js"></script>
+
+    <style>
+        .graphicdesign{
+            background-color: white;
+            padding: 20px;
+        }
+        .graphicdesign h1{
+            font-size: 5vw;
+            font-weight: 400;
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        .graphicdesign h2{
+            font-size: 2vw;
+            font-weight: 300;
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between; 
+            gap: 20px; 
+            padding: 20px; 
+        }
+
+        #background{
+            background-color: rgba(125, 142, 241, 0.2);
+            margin: 20px;
+            margin-right: 30px;
+            margin-left: 30px;
+            border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .content img {
+            object-fit: cover; 
+            margin-right: 20px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .content .text {
+            flex: 1;
+            max-width: calc(100% - 35px); /* Adjust to prevent overflowing with the image */
+            word-break: break-word; /* Ensures long words or lines break properly */
+            overflow-wrap: break-word; 
+        }
+
+        .text h3{
+            font-size: 23px;   
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        @media(max-width: 1000px) {
+            .graphicdesign h1{
+                font-size: 5vh;
+               
+            }
+            .graphicdesign h2{
+                font-size: 3vh;
+            }
+            #background{
+                padding-right: 2px;
+            }
+            .content {
+                flex-direction: column; 
+                align-items: center; 
+            }
+
+            .content img {
+                margin-right: 3px; 
+                margin-bottom: 20px; 
+                max-width: 100%;
+            }
+
+            .content .text {
+                text-align: left;
+                margin-right: 25px;
+            }
+            .text h3{
+            font-size: 3vh;
+            }
+        }
+    </style>
+</body>
+</html>
