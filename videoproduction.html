@@ -35,8 +35,8 @@
         </nav>
         <div class="header-logo">
         <a href="index.html">
-            <img class="logo" src="images/IMA logo in white.png" alt="Logo"/> 
-            <h1>IN MEDIA AGENCY</h1>  
+            <img class="logo-big" src="images/IMA logo in white.png" alt="Logo"/> 
+            <h1 class="logo-words">IN MEDIA AGENCY</h1>  
             </a>
         </div>
         <a class="header-book" href="https://www.instagram.com/ima_producer/"><i class="fab fa-instagram"></i></a>
@@ -58,7 +58,15 @@
     <h2>We offer filming, photography, and video production services suited for all types of industries.</h2>
         <div id="background">
             <div class="content">
-                <video src="images/HLNY - CWC v7.mp4" controls autoplay muted loop></video>
+                <iframe height="350"
+                src="https://www.youtube.com/embed/IZaEvrpWVUs?si=axu9jTURuNL17nKr&autoplay=1&mute=1&loop=1&playlist=IZaEvrpWVUs" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+            
                 <div class="text">
                     <h3>Health Care/Medical Information Videos</h3>
                     <br>
@@ -82,7 +90,7 @@
         
         <div id="background">
             <div class="content">
-                <video src="images/Go Tell It On The Mountain Final.mp4" controls autoplay muted loop></video>
+                <iframe height="350" src="https://www.youtube.com/embed/3-LttsgFQ9Y?si=87dbqDVjsAfrNRUM&autoplay=1&mute=1&loop=1&playlist=3-LttsgFQ9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div class="text">
                     <h3>Music Videos</h3>
                     <br>
@@ -104,7 +112,7 @@
     
         <div id="background">
             <div class="content">
-                <video src="images/Book Reading Sample.mov" controls autoplay muted loop></video>
+                <iframe height="350" src="https://www.youtube.com/embed/RUIsh3BME2o?si=jY8ALZAKf1AyYIN5&autoplay=1&mute=1&loop=1&playlist=RUIsh3BME2o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div class="text">
                     <h3>Book Reading Voice Overs</h3>
                     <br>
@@ -154,7 +162,7 @@
             box-sizing: border-box;
             overflow: hidden;
         }
-        .content video, .content img {
+        .content iframe, .content img {
             object-fit: cover; 
             margin-right: 20px;
             width: 100%;
@@ -191,12 +199,15 @@
                 align-items: center; 
             }
 
-            .content video, .content img {
+            .content iframe, .content img {
                 margin-right: 3px; 
                 margin-bottom: 20px; 
                 max-width: 100%;
             }
 
+            .content iframe {
+                height: 450px;
+            }
 
             .content .text {
                 text-align: left;
@@ -205,6 +216,16 @@
             }
             .text h3{
                 font-size: 3vh;
+            }
+        }
+        @media(max-width: 800px) {
+            .content iframe {
+                height: 300px;
+            }
+        }
+        @media(max-width: 550px) {
+            .content iframe {
+                height: 200px;
             }
         }
        

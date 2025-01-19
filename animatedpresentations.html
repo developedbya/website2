@@ -37,8 +37,8 @@
         </nav>
         <div class="header-logo">
         <a href="index.html">
-            <img class="logo" src="images/IMA logo in white.png" alt="Logo"/> 
-            <h1>IN MEDIA AGENCY</h1>  
+            <img class="logo-big" src="images/IMA logo in white.png" alt="Logo"/> 
+            <h1 class="logo-words">IN MEDIA AGENCY</h1>  
             </a>
         </div>
         <a class="header-book" href="https://www.instagram.com/ima_producer/"><i class="fab fa-instagram"></i></a>
@@ -61,7 +61,7 @@
         <h2>Watch our latest slide deck reel:</h2>
            
         <div class="latest">
-            <video src="images/IMA Slide Deck Reel video.mp4" controls autoplay muted loop></video>
+            <iframe height="500" src="https://www.youtube.com/embed/gCeFMA_Gs40?si=iVm5Nh30_dXROZ_Q&autoplay=1&mute=1&loop=1&playlist=gCeFMA_Gs40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>         
             <div id="background">
                 <div class="content">
@@ -115,7 +115,7 @@
             
             <div id="background">
                 <div class="content">
-                    <video src="images/Jimmy Bond Title Card Full.mov" controls autoplay muted loop></video>
+                    <iframe height="350" src="https://www.youtube.com/embed/V5zWCJ9NrRo?si=UWDxhAiT73zeR7hm&autoplay=1&mute=1&loop=1&playlist=V5zWCJ9NrRo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div class="text">
                         <h3>Animated PowerPoint/Slideshows</h3>
                         <br>
@@ -126,7 +126,7 @@
 
             <div id="background">
                 <div class="content">
-                    <video src="images/Logo animation for FB.mov" controls autoplay muted loop></video>
+                    <iframe height="350" src="https://www.youtube.com/embed/KKNz7pau00A?si=7D5wpc_VVZPDXBu0&autoplay=1&mute=1&loop=1&playlist=KKNz7pau00A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div class="text">
                         <h3>Logo Animation</h3>
                         <br>
@@ -168,16 +168,16 @@
             gap: 20px; 
             padding: 20px; 
         }
-        .latest {
+        .latest{
             display: flex;             
             justify-content: center;   
             margin: 20px auto;         
         }
 
-        .latest video {
+        .latest iframe  {
             width: 100%;               
             max-width: 750px;         
-            height: auto;    
+                
         }
 
 
@@ -191,7 +191,7 @@
             box-sizing: border-box;
             overflow: hidden;
         }
-        .content video, .content img {
+        .content iframe, .content img {
             object-fit: cover; 
             margin-right: 20px;
             width: 100%;
@@ -227,10 +227,13 @@
                 align-items: center; 
             }
 
-            .content video, .content img {
+            .content iframe, .content img {
                 margin-right: 3px; 
                 margin-bottom: 20px; 
                 max-width: 100%;
+            }
+            .content iframe{
+                height: 450px;
             }
 
             .content .text {
@@ -244,12 +247,26 @@
                 margin-left: 30px;
                 margin-right: 30px;
             }
+            .latest iframe{
+                height: 450px;
+            }
+        }
+        @media(max-width: 800px) {
+            .content iframe, .latest iframe{
+                height: 300px;
+            }
+        }
+        @media(max-width: 550px) {
+            .content iframe, .latest iframe {
+                height: 200px;
+            }
         }
         @media(max-width: 500px) {
             .videoproduction h1{
                 font-size: 38px;
                
             }
+        
         }
     </style>
 
