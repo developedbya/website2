@@ -58,15 +58,7 @@
     <h2>We offer filming, photography, and video production services suited for all types of industries.</h2>
         <div id="background">
             <div class="content">
-                <iframe height="350"
-                src="https://www.youtube.com/embed/IZaEvrpWVUs?si=axu9jTURuNL17nKr&autoplay=1&mute=1&loop=1&playlist=IZaEvrpWVUs" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-            </iframe>
-            
+                <iframe height="280" src="https://player.vimeo.com/video/1061483670?h=e77c8dc15d&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&muted=1&autoplay=1&loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="HLNY"></iframe>
                 <div class="text">
                     <h3>Health Care/Medical Information Videos</h3>
                     <br>
@@ -82,15 +74,14 @@
                     <h3>Educational Programs for Children</h3>
                     <br>
                     <h3>Creating unique programs that captivate a young mind's imagination and develop fun ways for kids to learn through visual learning.</h3>
-                    <br>
-                    <h3>⭐️ Approved Vendors of NYC DOE</h3>
+                    
                 </div>
             </div>
         </div>
         
         <div id="background">
             <div class="content">
-                <iframe height="350" src="https://www.youtube.com/embed/3-LttsgFQ9Y?si=87dbqDVjsAfrNRUM&autoplay=1&mute=1&loop=1&playlist=3-LttsgFQ9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe height="280" src="https://player.vimeo.com/video/1061493413?h=41b79d469f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&muted=1&autoplay=1&loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Go Tell It On The Mountain"></iframe>
                 <div class="text">
                     <h3>Music Videos</h3>
                     <br>
@@ -112,7 +103,7 @@
     
         <div id="background">
             <div class="content">
-                <iframe height="350" src="https://www.youtube.com/embed/RUIsh3BME2o?si=jY8ALZAKf1AyYIN5&autoplay=1&mute=1&loop=1&playlist=RUIsh3BME2o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe height="280" src="https://player.vimeo.com/video/1061483621?h=c44a0e1dc2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&muted=1&autoplay=1&loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Voiceover Follow Along"></iframe>
                 <div class="text">
                     <h3>Book Reading Voice Overs</h3>
                     <br>
@@ -168,7 +159,6 @@
             width: 100%;
             max-width: 500px;
         }
-
         .content .text {
             flex: 1;
             max-width: calc(100% - 35px); /* Adjust to prevent overflowing with the image */
@@ -181,6 +171,13 @@
             margin-bottom: 20px;
             font-weight: 400;
         }
+        iframe {
+    display: block; /* Removes inline spacing */
+    margin: 0; /* Ensures no extra margin */
+    padding: 0; /* Ensures no extra padding */
+    border: none; /* Optional: Removes any default border */
+}
+
        
 
         @media(max-width: 1000px) {
@@ -204,8 +201,7 @@
                 margin-bottom: 20px; 
                 max-width: 100%;
             }
-
-            .content iframe {
+            .content iframe{
                 height: 450px;
             }
 
@@ -219,13 +215,49 @@
             }
         }
         @media(max-width: 800px) {
-            .content iframe {
+            .content iframe, .latest iframe{
                 height: 350px;
+                margin:0;
+                padding-top: 0;
             }
         }
-        @media(max-width: 550px) {
-            .content iframe {
+        @media(max-width: 700px) {
+            .content iframe, .latest iframe {
+                height: 300px;
+                padding-bottom: 10px;
+                padding-top: 0;
+            }
+        }
+        @media(max-width: 600px) {
+            .content iframe, .latest iframe {
                 height: 250px;
+                
+                padding-top: 0;
+            }
+        }
+        @media(max-width: 500px) {
+            .content iframe, .latest iframe {
+                height: 220px;
+      
+                padding-top: 0;
+            }
+        }
+        @media(max-width: 400px) {
+            .content iframe, .latest iframe {
+                height: 175px;
+                margin-bottom: 5px;
+      
+                padding-top: 0;
+            }
+        }
+     
+     
+        
+        @media(max-width: 350px) {
+            .content iframe, .latest iframe {
+                height: 175px;
+              
+                padding-top: 0;
             }
         }
         @media(max-width: 600px) {

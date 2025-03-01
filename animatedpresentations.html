@@ -110,7 +110,7 @@
             
             <div id="background">
                 <div class="content">
-                    <iframe height="280"src="https://player.vimeo.com/video/1061483674?h=159d935a32&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&mute=0&loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Jimmy Bond Title Card"></iframe>
+                    <iframe height="280"src="https://player.vimeo.com/video/1061483674?h=159d935a32&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&muted=1&autoplay=1&loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Jimmy Bond Title Card"></iframe>
                     <div class="text">
                         <h3>Animated PowerPoint / Slideshows</h3>
                         <br>
@@ -121,7 +121,7 @@
 
             <div id="background">
                 <div class="content">
-                    <iframe height="350" src="https://www.youtube.com/embed/KKNz7pau00A?si=7D5wpc_VVZPDXBu0&autoplay=1&mute=1&loop=1&playlist=KKNz7pau00A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe height="280" src="https://player.vimeo.com/video/1061493453?h=15172da5c7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&muted=1&autoplay=1&loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="OCM"></iframe>
                     <div class="text">
                         <h3>Logo Animation</h3>
                         <br>
@@ -268,7 +268,8 @@
             .content iframe, .latest iframe {
                 height: 220px;
                 margin-bottom: 10px;
-                padding-top: 0;
+                padding-top: 0 !important;
+
             }
         }
         
@@ -276,7 +277,7 @@
             .content iframe, .latest iframe {
                 height: 175px;
                 margin-bottom: 10px;
-                padding-top: 0;
+                padding-top: 0 !important;
             }
         }
         @media(max-width: 500px) {
@@ -285,6 +286,14 @@
                
             }
         
+        }
+        @media(max-width: 400px) {
+            .content iframe, .latest iframe {
+                height: 175px;
+                margin-bottom: 5px;
+      
+                padding-top: 0;
+            }
         }
         @media(max-width: 600px) {
             .videoproduction h1, .videoproduction h2{
