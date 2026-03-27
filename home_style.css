@@ -321,7 +321,6 @@ footer{
 
 }
 
-
 @media screen and (max-width: 2200px){
     .projects{
         grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));

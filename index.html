@@ -22,7 +22,7 @@
                     <ul id="submenu">
                         <li><a href="videoproduction.html">Video Production</a></li>
                         <li><a href="graphicdesign.html">Graphic Design</a></li>
-                        <li><a href="animatedpresentations.html">Animated Presentations</a></li>
+                        <li><a href="animatedpresentations.html">Apps & Websites</a></li>
                         <li><a href="musicandaudio.html">Music & Audio</a></li>
                     </ul>
                 </li> 
@@ -67,8 +67,8 @@
                 <a class="overlay-button" id="blue" href="graphicdesign.html">Graphic Design</a>
             </div>
             <div class="img-wrapper">
-                <img src="images/Screen Shot 2021-06-25 at 4.32.12 PM.png" alt="Animated presentations">
-                <a class="overlay-button" id="yellow" href="animatedpresentations.html">Animated Presentations</a>
+                <img src="images/apps and websites.png" alt="App and Web Development">
+                <a class="overlay-button" id="yellow" href="animatedpresentations.html">Apps & Websites</a>
             </div>
             <div class="img-wrapper">
                 <img src="images/AdobeStock_359003932.jpeg" alt="Music & Audio">
@@ -82,9 +82,9 @@
         function changeTextForSmallScreens() {
             var element = document.querySelector('.overlay-button#yellow');
             if (window.innerWidth < 1070 && element) {
-                element.textContent = 'PowerPoints';
+                element.textContent = 'Apps & Websites';
             } else if (window.innerWidth >= 1070 && element) {
-                element.textContent = 'Animated Presentations';
+                element.textContent = 'Apps & Websites';
             }
         }
     
