@@ -328,4 +328,11 @@
     .vertical-carousel .navigation {
         opacity: 1; /* Always show arrows on mobile */
     }
+    .v-navigation-visibility .v-slide-icon{
+        display:none;
+    }
+    .vertical{
+        padding-top:25px;
+        padding-left:0px;
+    }
 }
