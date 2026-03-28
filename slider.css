@@ -99,12 +99,15 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin-right:50px !important;
 }
 
 .content .vertical-carousel{
     margin-bottom:0px;
 }
-
+.vertical{
+    padding-left:25px;
+}
 /* Make Vertical Navigation behave like the Horizontal one */
 .vertical-carousel .navigation {
     position: absolute;
