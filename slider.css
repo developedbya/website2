@@ -83,6 +83,131 @@
     height: 100%;
 }
 
+/* Fix for Vertical Carousel Container */
+.vertical-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 385px; /* Explicit height is required for absolute children */
+    overflow: hidden;
+    margin-right: 20px;
+   
+}
+
+/* Ensure images fill the vertical space */
+.v-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.content .vertical-carousel{
+    margin-bottom:0px;
+}
+
+/* Make Vertical Navigation behave like the Horizontal one */
+.vertical-carousel .navigation {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0; /* Hidden until hover */
+    transition: opacity 0.5s ease;
+    z-index: 10;
+    pointer-events: none; /* Allows clicking through the div, but we enable it for buttons */
+}
+
+.vertical-carousel:hover .navigation {
+    opacity: 1;
+}
+
+.v-prev-btn, .v-next-btn {
+    pointer-events: auto; /* Re-enable clicking on buttons */
+    background: rgba(225, 225, 225, 0.7);
+    color: #222;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Fix for Dots (Navigation Visibility) */
+.v-navigation-visibility {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.v-slide-icon {
+    background: rgba(224, 221, 221, 0.95);
+    width: 25px;
+    height: 5px;
+    margin: 0 6px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.v-slide-icon.active {
+    background: #7c7b7b;
+}
+/* Add this to your CSS */
+.v-slide {
+    position: absolute; /* Stack them on top of each other */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Hide by default */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade */
+}
+
+.v-slide.active {
+    opacity: 1; /* Show when JS adds the active class */
+    z-index: 2; /* Bring to front */
+}
+
+/* --- THE CLEAN VERTICAL SLIDER FIX --- */
+
+.vertical-carousel {
+    position: relative;
+    
+   
+    margin: 0 auto 20px auto;
+    
+    /* 1. This keeps the box shaped like a poster (Portrait) automatically */
+    aspect-ratio: 3.75 / 4.7; 
+    
+    /* 2. Safety: ensures it never goes taller than the actual screen height */
+   
+   
+    overflow: hidden;
+  
+}
+
+
+
+/* 4. Center the arrows vertically based on the new dynamic height */
+.vertical-carousel .navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.vertical-carousel:hover .navigation {
+    opacity: 1;
+}
+
 
 @media (max-width: 1000px) {
     .navigation{
@@ -190,3 +315,14 @@
      }
     }
 
+/* --- Vertical Carousel Responsive Fixes --- */
+
+@media(max-width: 1000px) {
+    .vertical-carousel {
+        max-width: 100%; /* Let it expand to almost full width on iPad/Phone */
+        height: auto !important; /* Forces aspect-ratio to take over instead of fixed px */
+    }
+    .vertical-carousel .navigation {
+        opacity: 1; /* Always show arrows on mobile */
+    }
+}

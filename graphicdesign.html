@@ -59,7 +59,27 @@
     <h2>We create eye-catching designs and animated presentations that promote your programs, campaigns, and initiatives.</h2>
         <div id="background">
             <div class="content">
-                <img src="images/OCM 1000 poster 6.4_CL.png">
+                <div class="vertical-carousel">
+
+                    <div class="v-slide active">
+                        <img src="images/OCM 1000 poster 6.4_CL.png">
+                    </div>
+                
+                    <div class="v-slide">
+                        <img src="images/msb poster.jpeg">
+                    </div>
+                
+                    <div class="navigation">
+                        <i class="fas fa-chevron-left v-prev-btn"></i>
+                        <i class="fas fa-chevron-right v-next-btn"></i>
+                    </div>
+                
+                    <div class="v-navigation-visibility">
+                        <div class="v-slide-icon active"></div>
+                        <div class="v-slide-icon"></div>
+                    </div>
+                
+                </div>
                 <div class="text">
                     <h3>Promotional Materials: Pamphlets, Brochures, Posters, Banners & eBlasts</h3>
                     <br>
@@ -183,7 +203,8 @@
             margin-left: 30px;
             margin-bottom: 20px;
         }
-        .content iframe, .content img {
+        .content > img,
+        .content > iframe {
             object-fit: cover; 
             margin-right: 20px;
             width: 100%;
@@ -235,11 +256,13 @@
             font-weight: 400;
         }
         iframe {
-    display: block; /* Removes inline spacing */
-    margin: 0; /* Ensures no extra margin */
-    padding: 0; /* Ensures no extra padding */
-    border: none; /* Optional: Removes any default border */
-}
+            display: block; /* Removes inline spacing */
+            margin: 0; /* Ensures no extra margin */
+            padding: 0; /* Ensures no extra padding */
+            border: none; /* Optional: Removes any default border */
+        }
+
+            
 
 
         @media(max-width: 1000px) {
@@ -259,7 +282,7 @@
                 margin-right: 3px;
             }
 
-            .content img {
+            .content img, .v-slide {
                 margin-right: 3px; 
                 margin-bottom: 20px; 
                 max-width: 100%;
@@ -502,5 +525,55 @@
 
         repeater(); // Start the initial automatic slide change
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const vNextBtn = document.querySelector(".v-next-btn");
+    const vPrevBtn = document.querySelector(".v-prev-btn");
+    const vSlides = document.querySelectorAll(".v-slide");
+    const vDots = document.querySelectorAll(".v-slide-icon");
+    
+    let vIndex = 0;
+    let vInterval;
+    
+    function showVSlide(i){
+        vSlides.forEach(s => s.classList.remove("active"));
+        vDots.forEach(d => d.classList.remove("active"));
+    
+        vSlides[i].classList.add("active");
+        vDots[i].classList.add("active");
+    }
+    
+    function nextVSlide(){
+        vIndex = (vIndex + 1) % vSlides.length;
+        showVSlide(vIndex);
+    }
+    
+    function prevVSlide(){
+        vIndex = (vIndex - 1 + vSlides.length) % vSlides.length;
+        showVSlide(vIndex);
+    }
+    
+    vNextBtn.addEventListener("click", () => {
+        nextVSlide();
+        resetV();
+    });
+    
+    vPrevBtn.addEventListener("click", () => {
+        prevVSlide();
+        resetV();
+    });
+    
+    function startV(){
+        vInterval = setInterval(nextVSlide, 5000);
+    }
+    
+    function resetV(){
+        clearInterval(vInterval);
+        startV();
+    }
+    
+    startV();
+});
+        </script>
 </body>
 </html>
