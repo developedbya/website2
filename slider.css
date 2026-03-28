@@ -105,9 +105,7 @@
 .content .vertical-carousel{
     margin-bottom:0px;
 }
-.vertical{
-    padding-left:25px;
-}
+
 /* Make Vertical Navigation behave like the Horizontal one */
 .vertical-carousel .navigation {
     position: absolute;
@@ -330,9 +328,5 @@
     }
     .v-navigation-visibility .v-slide-icon{
         display:none;
-    }
-    .vertical{
-        padding-top:25px;
-        padding-left:0px;
     }
 }
