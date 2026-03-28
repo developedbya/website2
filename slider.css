@@ -46,15 +46,7 @@
     
 }
 
-.prev-btn {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-}
 
-.next-btn {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-}
 
 
 .navigation-visibility{
@@ -127,9 +119,10 @@
 
 .v-prev-btn, .v-next-btn {
     pointer-events: auto; /* Re-enable clicking on buttons */
-    background: rgba(225, 225, 225, 0.7);
+    font-size: 2.5vh; /* Proportional to the viewport width */
     color: #222;
-    padding: 10px;
+    background: rgba(225, 225, 225, 0.7);
+    padding: 1vh;
     cursor: pointer;
 }
 
@@ -214,9 +207,12 @@
     .navigation{
         opacity: 1;
     }
-    .prev-btn, .next-btn {
+    .prev-btn, .next-btn{
       font-size: 3vh;
        margin-top: 180px !important;
+    }
+    .v-prev-btn, .v-next-btn{
+        font-size: 3vh;
     }
     .slider{ 
         width: 100%;
